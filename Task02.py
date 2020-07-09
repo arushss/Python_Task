@@ -91,3 +91,112 @@ while x<=3200:
         print(x)
     x+=1
 
+# Section 6 of Task 2 in python
+# What is the output of the following code examples?
+x=123 
+for i in x:
+    print(i)
+# Answer TypeError: int object is not iterable
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+    if i == 3:
+        break
+else:
+    print("error")
+
+#Answer
+#0
+#1
+#2
+
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        Break
+#Answer Break is not defined
+
+# Section 7 of Task 2 in python
+# Write a program that prints all the numbers from 0 to 6 except 3 and 6.
+i=0
+while i<7:
+    print(i)
+    i+=1
+    if(i==3 or i==6):
+        i+=1
+        continue
+
+# Section 8 of Task 2 in python
+# Write a program that accepts a string as an input from the user and calculates the number of digits and letters.
+
+print("please enter any string that may include digits and letters")
+str=input()
+digits=letters=0
+for i in str:
+    if i.isdigit():
+        digits+=1
+    if i.isalpha():
+        letters+=1
+
+
+print("The number of digits are {}".format(digits))
+print("The number of letters are {}".format(letters))
+
+# Section 9 of Task 2 in python
+# Write a program such that it asks users to “guess the lucky number”. If the correct number is guessed the program stops, otherwise it continues forever. 
+lucky_number = 5
+while True:
+    print("write the lucky number")
+    x=eval(input())
+    if x==lucky_number:
+        break
+    print("keep guessing")
+
+# Second part of the same question
+lucky_number = 5
+while True:
+    print("write the lucky number")
+    number=eval(input())
+    if number==lucky_number:
+        print("you have guessed right")
+        break
+    print("Would you like to continue guessing? Enter yes or no")
+    answer=input()
+    if(answer=='no'):
+        break
+    else:
+        continue
+
+# Section 10 of Task 2 in Python
+lucky_number=5
+counter=1
+while counter<=5:
+    print("guess the lucky number")
+    x=eval(input())
+    if x==lucky_number:
+        print("Good guess!")
+    else:
+        print("Try again!")
+    counter+=1
+print("Game over!")
+
+# Section 11 of Task 2 in Python
+
+lucky_number=5
+counter=1
+while counter<=5:
+    print("guess the lucky number")
+    x=eval(input())
+    if x==lucky_number:
+        print("Good guess!")
+        break
+    else:
+        if counter<5:
+            print("Try again!")
+    counter+=1
+if counter==6:
+    print("Sorry but that was not very successful")
