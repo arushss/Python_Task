@@ -131,3 +131,14 @@ except ZeroDivisionError:
     print("Cant divide any number by zero")
 
 # Section 13
+from functools import reduce
+
+def test(x1,x2):
+    return x1+x2
+print(reduce(test,[[1,2,3],[4,5],[6,7,8]]))
+sample=reduce(test,[[1,2,3],[4,5],[6,7,8]])
+print(reduce(lambda x,y: x*10+y, sample))
+
+# Section 14
+(i) 2
+(ii) NameError: name 'f' is not defined
